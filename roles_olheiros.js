@@ -405,7 +405,6 @@ const Laterais = (player_data_array) => {
 
         let nome = elem.nome
         let atributos = elem.atributos
-        if (i > 0) {
             attr_chaves = (atributos.primeiro_toque + atributos.finta + atributos.cruzamento + atributos.passe + atributos.tecnica + atributos.decisao + atributos.ind_trabalho + atributos.sem_bola + atributos.trab_equipe + atributos.aceleracao + atributos.resistencia + atributos.velocidade)
             attr_secundarios = (atributos.desarme + atributos.antecipacao + atributos.compostura + atributos.imprevisibilidade + atributos.agilidade + atributos.equilibrio) * 0.8
             attr_mentais = (atributos.antecipacao + atributos.determinacao + atributos.decisao + atributos.apti_fisica) * 0.5
@@ -419,7 +418,7 @@ const Laterais = (player_data_array) => {
                 media_attr: MediaGeral(atributos)
             }
             best_laterais_array.push(best_lateral)
-        }
+        
 
     })
     return best_laterais_array.sort((a, b) => b.overall - a.overall).slice(0, 7)
